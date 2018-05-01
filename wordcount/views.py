@@ -11,7 +11,7 @@ def about(request):
   return render(request, 'about.html')
 
 def count(request):
-  fulltext = request.GET['fulltext']
+  fulltext = request.GET['fulltext'].lower()
   wordlist = fulltext.split()
   worddictionary = {}
 
